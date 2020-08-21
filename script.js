@@ -32,3 +32,5 @@ weekday [3] = "Wednesday";
 weekday [4] = "Thursday";
 weekday [5] = "Friday";
 weekday [6] = "Saturday";
+
+alert(weekday [0]);
