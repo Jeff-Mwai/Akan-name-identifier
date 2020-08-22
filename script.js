@@ -43,6 +43,7 @@ var MM=12;
 var DD=04;
 var dateOfBirth = "";
 var arrDate ="";
+var year = "";
 dateOfBirth = document.getElementById("exampleInputDateOfBirth");
 
 (day) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
@@ -64,10 +65,40 @@ arrDate = dateOfBirth.split("/");
 /* mm/dd/yyyy */
 
 MM = arrDate[0];
+DD = arrDate[1];
+year = arrDate[2];
+YY = year.substring(2, 4);
+CC = year.substring(0, 2);
+
 
 function fnGetDay(){
     /* switch(){
     } */
+    day = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+
+switch(day) {
+  case 0:
+    // code block
+    break;
+  case 1:
+    // code block
+    break;
+
+     case 1:
+    // code block
+    break;
+
+     case 1:
+    // code block
+    break;
+
+     case 1:
+    // code block
+    break;
+    
+  default:
+    // code block
+} 
 
         
 }
