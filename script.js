@@ -1,4 +1,4 @@
-let males = {
+/* let males = {
     Sunday: "Kwasi",
     Monday: "Kwandwo",
     Tuesday: "Kwabena",
@@ -33,4 +33,41 @@ weekday [4] = "Thursday";
 weekday [5] = "Friday";
 weekday [6] = "Saturday";
 
-alert(weekday [0]);
+alert(weekday [0]); */
+
+
+var day='';
+var CC=19;
+var YY=96;
+var MM=12;
+var DD=04;
+var dateOfBirth = "";
+var arrDate ="";
+dateOfBirth = document.getElementById("exampleInputDateOfBirth");
+
+(day) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+
+console.log("Day is"+day);
+/* switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+} */
+
+arrDate = dateOfBirth.split("/");
+
+/* mm/dd/yyyy */
+
+MM = arrDate[0];
+
+function fnGetDay(){
+    /* switch(){
+    } */
+
+        
+}
