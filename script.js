@@ -36,30 +36,22 @@ weekday [6] = "Saturday";
 alert(weekday [0]); */
 
 
-var day='';
-var CC=19;
-var YY=96;
-var MM=12;
-var DD=04;
+var day=0;
+var CC=0;
+var YY=0;
+var MM=0;
+var DD=0;
 var dateOfBirth = "";
 var arrDate ="";
 var year = "";
+var gender="";
+
+var name ="";
+
+function fnSubmit(){
+
+ gender = document.getElementById("male").value;
 dateOfBirth = document.getElementById("exampleInputDateOfBirth");
-
-(day) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
-
-console.log("Day is"+day);
-/* switch(expression) {
-  case x:
-    // code block
-    break;
-  case y:
-    // code block
-    break;
-  default:
-    // code block
-} */
-
 arrDate = dateOfBirth.split("/");
 
 /* mm/dd/yyyy */
@@ -71,33 +63,77 @@ YY = year.substring(2, 4);
 CC = year.substring(0, 2);
 
 
+
+     /*    An invalid day should be (d<=0) or (d>31)
+
+        An invalid month should be (m<= 0) or (m > 12)   */
+
+
+      if (DD<=0|| DD>31){
+                alert("Invalid Date inputed");
+      }else if (MM<=0|| MM>12) {
+                alert("Invalid Month inputed")   
+      }else{
+                fnGetDay();
+      }
+
+
+
+}
+
+
+
+
 function fnGetDay(){
     /* switch(){
     } */
     day = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
 
-switch(day) {
+switch(day.toFixed()) {
   case 0:
     // code block
+    if(gender === "F"){
+        name="Akosua";
+    }else{
+        name="Kwasi";
+    }
     break;
   case 1:
-    // code block
+    if(gender === "F"){
+        name="Adwoa";
+    }else{
+        name="Kwadwo";
+    }
     break;
 
-     case 1:
+     case 2:
     // code block
+      if(gender === "F"){
+        name="Abenaa";
+    }else{
+        name="Kwadwo";
+    }
     break;
 
-     case 1:
+     case 3:
     // code block
+      if(gender === "F"){
+        name="Akua";
+    }else{
+        name="Kwaku";
+    }
     break;
 
-     case 1:
+     case 4:
     // code block
+      if(gender === "F"){
+        name="Yaa";
+    }else{
+        name="Yaw";
+    }
     break;
-    
-  default:
-    // code block
+
+
 } 
 
         
