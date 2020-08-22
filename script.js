@@ -133,6 +133,25 @@ switch(day.toFixed()) {
     }
     break;
 
+    case 5:
+    // code block
+      if(gender === "F"){
+        name="Afua";
+    }else{
+        name="Kofi";
+    }
+    break;
+    case 6:
+    // code block
+      if(gender === "F"){
+        name="Ama";
+    }else{
+        name="Kwane";
+    }
+    break;
+
+
+    alert ("Your Name is"+name);
 
 } 
 
