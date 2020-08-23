@@ -1,4 +1,9 @@
-.images {
+.container{
+    width: 100%;
+    height: 100%;background-image: linear-gradient(to bottom right, green, yellow);
+    color: white;
+}
+.img-container {
     display: flex;
     justify-content: space-between;
 }
