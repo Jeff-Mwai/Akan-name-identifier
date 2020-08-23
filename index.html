@@ -28,7 +28,7 @@
 
     <div class="container">
         <h2>About the Application</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum libero odio dignissimos velit ipsa iure asperiores, doloremque quo distinctio voluptatum omnis soluta voluptas numquam harum nam nisi, modi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum libero odio dignissimos velit ipsa iure asperiores, doloremque quo distinctio voluptatum omnis soluta voluptas numquam harum nam nisi, modi blanditiis</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum libero odio dignissimos velit ipsa iure asperiores, doloremque quo distinctio voluptatum omnis soluta voluptas numquam harum nam nisi, modi blanditiis. Lorem ipsum dolor sit ame</p>
 
         <div class="row">
             <div class="col-md-2"></div>
@@ -41,32 +41,33 @@
                         </ul>
                         <form>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Your Name</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                             
 
                             <div class="form-gender">
                             <p>Choose your Gender</p>
-                                 <input type="radio" name="male" id="male"><span id="male">&nbsp; Male</span>&nbsp;&nbsp; <br>
-                                 <input type="radio" name="male" id="male"><span id="female">&nbsp; Female</span>&nbsp;&nbsp;
+                                 <input type="radio" name="male" id="male" value="M"><span id="male">&nbsp; Male</span>&nbsp;&nbsp; <br>
+                                 <input type="radio" name="male" id="male" value="F"><span id="female">&nbsp; Female</span>&nbsp;&nbsp;
                             </div>
     
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputDateOfBirth">Date of Birth</label>
                                 <p>Example (October 20, 1990)</p>
-                                <input type="dateOfBirth" class="form-control" id="exampleInputDateOfBirth">
+                                <input type="date" class="form-control" id="dob" name="dob">
                             </div>
-            
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                        </form>
+                            <button  onclick="javascript: fnSubmit(); return false;" class="btn btn-primary">Submit</button>
+                          
                     </div>
-                    <div class="col-md-6"></div>
                 </div>
             
             </div>
-            <div class="col-md-2"></div>
+        
         </div>
 
     </div>
+    <script  type="text/javascript" src="script.js"></script>
 </body>
 </html>
+
+
