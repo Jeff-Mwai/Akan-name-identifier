@@ -50,24 +50,21 @@ var name ="";
 
 function fnSubmit(){
 
+
  gender = document.getElementById("male").value;
-dateOfBirth = document.getElementById("exampleInputDateOfBirth");
-arrDate = dateOfBirth.split("/");
+dateOfBirth = document.getElementById("dob").value;
 
-/* mm/dd/yyyy */
+console.log("DOB"+dateOfBirth + 'gender '+gender);
+arrDate = dateOfBirth.split("-");
 
-MM = arrDate[0];
-DD = arrDate[1];
-year = arrDate[2];
+/*  yyyymmdd*/
+
+MM = arrDate[1];
+DD = arrDate[2];
+year = arrDate[0];
 YY = year.substring(2, 4);
 CC = year.substring(0, 2);
-
-
-
-     /*    An invalid day should be (d<=0) or (d>31)
-
-        An invalid month should be (m<= 0) or (m > 12)   */
-
+console.log("Year is "+YY+ "Cc "+CC+"MM"+MM+"DD"+DD);
 
       if (DD<=0|| DD>31){
                 alert("Invalid Date inputed");
@@ -75,6 +72,7 @@ CC = year.substring(0, 2);
                 alert("Invalid Month inputed")   
       }else{
                 fnGetDay();
+               
       }
 
 
@@ -85,18 +83,28 @@ CC = year.substring(0, 2);
 
 
 function fnGetDay(){
-    /* switch(){
-    } */
-    day = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
 
-switch(day.toFixed()) {
+day= new Date (dateOfBirth);
+  
+  day = day.getDay()
+
+   
+ 
+    console.log("Date before conversion "+day);
+   
+
+switch(day) {
   case 0:
     // code block
-    if(gender === "F"){
+   
+
+        if(gender === "F"){
         name="Akosua";
     }else{
         name="Kwasi";
     }
+     alert ("Your Name is"+name);
+    console.log("Name is"+name);
     break;
   case 1:
     if(gender === "F"){
@@ -104,6 +112,8 @@ switch(day.toFixed()) {
     }else{
         name="Kwadwo";
     }
+     alert ("Your Name is"+name);
+    console.log("Name is"+name);
     break;
 
      case 2:
@@ -111,8 +121,10 @@ switch(day.toFixed()) {
       if(gender === "F"){
         name="Abenaa";
     }else{
-        name="Kwadwo";
+        name="Kwabena";
     }
+     alert ("Your Name is"+name);
+    console.log("Name is"+name);
     break;
 
      case 3:
@@ -122,6 +134,8 @@ switch(day.toFixed()) {
     }else{
         name="Kwaku";
     }
+     alert ("Your Name is"+name);
+    console.log("Name is"+name);
     break;
 
      case 4:
@@ -131,6 +145,8 @@ switch(day.toFixed()) {
     }else{
         name="Yaw";
     }
+     alert ("Your Name is"+name);
+    console.log("Name is"+name);
     break;
 
     case 5:
@@ -140,20 +156,26 @@ switch(day.toFixed()) {
     }else{
         name="Kofi";
     }
+     alert ("Your Name is"+name);
+    console.log("Name is"+name);
     break;
     case 6:
     // code block
       if(gender === "F"){
         name="Ama";
     }else{
-        name="Kwane";
+        name="Kwame";
     }
+     alert ("Your Name is"+name);
+    console.log("Name is"+name);
     break;
 
-
-    alert ("Your Name is"+name);
+   default:
+    console.log("default");
+    break;
 
 } 
+ 
 
         
 }
