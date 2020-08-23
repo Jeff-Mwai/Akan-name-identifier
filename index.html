@@ -1,73 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Akan</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light " style="background: green;">
-        <a class="navbar-brand" href="#">AKAN NAME IDENTIFIER</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" style= "flex: display; justify-content: flex-end;" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active" style="margin-left: 60px;">
-                <a class="nav-link" href="zodiak.html">ZODIAK SIGNS</a>
-            </li>
-            </ul>
-        </div>
-        </nav>
+  </head>
+  <body>
 
-    <div class="container">
-        <h2>About the Application</h2>
-        <p>The Akan Name Identifier is an application that is derived from the Ghanian naming system.<br> In Ghana,  when a child is born, he or she is named after the day of the week born.<br> For instance, a male born on Sunday is named Kwasi while a female is named Akosua.<br> Therefore, this system requires one to enter their gender and the day they were born.<br> Based on that, the system returns the day the person was born and it suggests the appropriate Akan name.</p>
-
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+  <div class="main-container d-flex justify-content-center">
+        <div class="form-container">
             
-                <div class="row" style= "margin-top: 80px; box-shadow: 1px 1px 50px 10px black;">
-                    <div class="col-md-6">
-                        <ul>
-                            <p>Input Your Details</p>
-                        </ul>
-                        <form>
-                            <div class="form-group">
-                             
-
-                            <div class="form-gender">
-                            <p>Choose your Gender</p>
-                                 <input type="radio" name="male" id="male" value="M"><span id="male">&nbsp; Male</span>&nbsp;&nbsp; <br>
-                                 <input type="radio" name="male" id="male" value="F"><span id="female">&nbsp; Female</span>&nbsp;&nbsp;
-                            </div>
-    
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputDateOfBirth">Date of Birth</label>
-                                <p>Example (October 20, 1990)</p>
-                                <input type="date" class="form-control" id="dob" name="dob">
-                            </div>
-                        </form>
-                            <button  onclick="javascript: fnSubmit(); return false;" class="btn btn-primary">Submit</button>
-                          
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand">AKAN NAME IDENTIFIER</a>
+                <form class="form-inline">
+                    <a href="/index.html" class="mr-2 text-dark">HOME</a>
+                    <a href="/zodiak.html" class="ml-4 mr-2 text-dark">ZODIAK SIGNS</a>
+                </form>
+            </nav>
+            <div class="row justify-content-center mt-5">
+                <div class="col-6">
+                    <div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Gender</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="gender" aria-label="Example select with button addon">
+                                    <option value="" selected>Choose...</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>                               
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob">
+                        </div>
+                       
+                        <button onclick="getName()" class="btn btn-success w-100">Submit</button>
                     </div>
                 </div>
-            
             </div>
-        
         </div>
-
+  </div>
+  
+<div class="modal" tabindex="-1" id="result">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Your Akan name is : <label id='resulttxt'/></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
-    <script  type="text/javascript" src="script.js"></script>
-</body>
+  </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
