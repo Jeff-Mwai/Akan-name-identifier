@@ -36,13 +36,7 @@ console.log("Year is "+YY+ "Cc "+CC+"MM"+MM+"DD"+DD);
                 fnGetDay();
                
       }
-
-
-
 }
-
-
-
 
 function fnGetDay(){
 
@@ -65,8 +59,7 @@ switch(day) {
     }else{
         name="Kwasi";
     }
-     alert ("Your Name is"+name);
-    console.log("Name is"+name);
+     alert ("Your Name is"+ name);
     break;
   case 1:
     if(gender === "F"){
@@ -75,7 +68,6 @@ switch(day) {
         name="Kwadwo";
     }
      alert ("Your Name is"+name);
-    console.log("Name is"+name);
     break;
 
      case 2:
@@ -86,7 +78,6 @@ switch(day) {
         name="Kwabena";
     }
      alert ("Your Name is"+name);
-    console.log("Name is"+name);
     break;
 
      case 3:
