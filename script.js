@@ -66,7 +66,9 @@ function getName(){
         //display result
         $('#result').modal('show');
         document.getElementById("resulttxt").innerHTML = name;
-    
+        //clear inputs
+         document.getElementById('gender').value = '';
+         document.getElementById('dob').value = '';
 
     }
 }
